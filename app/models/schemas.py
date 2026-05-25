@@ -57,4 +57,4 @@ class StatsResponse(BaseModel):
     by_category: dict[str, float]
     by_month: dict[str, float]
     total_spent: float
-    period: dict[str, str] | None = None
+    period: dict[str, str | None] | None = None
