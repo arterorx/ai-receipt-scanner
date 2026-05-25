@@ -8,6 +8,17 @@
 
 AI-powered receipt and invoice processor. Upload a photo of any receipt — get clean, structured JSON data back. Supports receipts in any language.
 
+## Features
+
+- AI-powered receipt scanning with Claude Vision
+- Automatic expense categorization (9 categories)
+- Multi-language support (Ukrainian, German, English receipts)
+- Batch upload (multiple receipts at once)
+- Confidence scoring for each scan
+- Spending statistics by category and month
+- RESTful API with Swagger documentation
+- Docker one-command setup
+
 ## Example
 
 **Input:** Photo of a grocery receipt (any language)
