@@ -17,7 +17,10 @@ async def db():
     await init_db()
     yield
     if db_module._shared_connection is not None:
-        await db_module._shared_connection.close()
+        conn = db_module._shared_connection
+        await conn.close()
+        if hasattr(conn, "_thread") and conn._thread.is_alive():
+            conn._thread.join(timeout=5)
         db_module._shared_connection = None
     db_module._db_path = original_path
 
