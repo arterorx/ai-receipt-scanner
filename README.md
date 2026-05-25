@@ -7,6 +7,27 @@
 
 AI-powered receipt and invoice processor. Upload a photo of any receipt — get clean, structured JSON data back. Supports receipts in any language.
 
+## Example
+
+**Input:** Photo of a grocery receipt (any language)
+
+**Output:**
+```json
+{
+  "vendor": "ATB Market",
+  "total": 450.00,
+  "currency": "UAH",
+  "date": "2026-05-20",
+  "category": "groceries",
+  "line_items": [
+    {"description": "Молоко 2.5%", "quantity": 2, "unit_price": 45.90, "total": 91.80},
+    {"description": "Хліб білий", "quantity": 1, "unit_price": 32.00, "total": 32.00},
+    {"description": "Курка філе", "quantity": 0.85, "unit_price": 189.00, "total": 160.65}
+  ],
+  "confidence_score": 0.95
+}
+```
+
 ## Quick Start
 
 ```bash
