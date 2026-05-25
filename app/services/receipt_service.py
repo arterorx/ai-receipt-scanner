@@ -1,6 +1,6 @@
 import json
 import logging
-from datetime import datetime
+from datetime import UTC, datetime
 
 from fastapi import UploadFile
 
@@ -44,7 +44,7 @@ async def process_upload(files: list[UploadFile]) -> ScanResponse:
             results.append(ScanResult(filename=filename, success=False, error=str(e)))
             continue
 
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         receipt_id = await save_receipt({
             "vendor": receipt_data.vendor,
             "total": receipt_data.total,
