@@ -10,7 +10,7 @@ AI-powered receipt and invoice processor. Upload a photo of any receipt — get 
 ## Quick Start
 
 ```bash
-git clone https://github.com/ArturoAHR/ai-receipt-scanner.git && cd ai-receipt-scanner
+git clone https://github.com/arterorx/ai-receipt-scanner.git && cd ai-receipt-scanner
 cp .env.example .env  # add your ANTHROPIC_API_KEY
 docker-compose up
 ```
