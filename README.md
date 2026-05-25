@@ -8,6 +8,8 @@
 
 AI-powered receipt and invoice processor. Upload a photo of any receipt — get clean, structured JSON data back. Supports receipts in any language.
 
+![Swagger UI](docs/images/swagger-ui.png)
+
 ## Features
 
 - AI-powered receipt scanning with Claude Vision
