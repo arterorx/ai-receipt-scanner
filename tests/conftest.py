@@ -12,11 +12,14 @@ import app.models.database as db_module
 
 @pytest_asyncio.fixture
 async def db():
-    original = db_module._db_path
+    original_path = db_module._db_path
     db_module._db_path = ":memory:"
     await init_db()
     yield
-    db_module._db_path = original
+    if db_module._shared_connection is not None:
+        await db_module._shared_connection.close()
+        db_module._shared_connection = None
+    db_module._db_path = original_path
 
 
 @pytest.fixture
